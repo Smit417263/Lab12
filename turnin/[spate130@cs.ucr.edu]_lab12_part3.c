@@ -7,7 +7,7 @@
  *	I acknowledge all content contained herein, excluding template or example
  *	code, is my own original work.
  *
- *	Demo Link: 
+ *	Demo Link: https://youtu.be/Qomv-zIvL2g
  */
 
 
@@ -74,8 +74,8 @@ int tick_1(int state){
 
 
 
-static const unsigned char pattern[3]={0x3C,0x24,0x3C};	
-static const unsigned char row[3]={0xF7,0xFB,0xFD};  	
+static const unsigned char r_pattern[3]={0x3C,0x24,0x3C};	
+static const unsigned char r_row[3]={0xF7,0xFB,0xFD};  	
 static unsigned char i;	
 static unsigned char j; 
 static unsigned char c = 0;
@@ -91,8 +91,8 @@ switch (state) {
 
 switch (state) {
     case start_1:
-        i = pattern[c%3];
-        j = row[c%3];
+        i = r_pattern[c%3];
+        j = r_row[c%3];
         c++;
         break;
 
